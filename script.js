@@ -94,8 +94,7 @@ document.addEventListener('DOMContentLoaded', () => {
         currentTrackIndex = index;
         const track = playlist[currentTrackIndex];
         
-        // *** IMPORTANT ***
-        // If your API only ever plays "matketnoi", then all tracks will sound the same.
+        
         // The 'src' from playlist.json should be the unique identifier for each song.
         audioPlayer.src = `${API_BASE_URL}${track.src}`; 
         

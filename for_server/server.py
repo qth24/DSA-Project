@@ -3,7 +3,7 @@ import os
 
 app = Flask(__name__)
 
-# Thư mục chứa các file mp3 (ở đây là thư mục hiện tại)
+# The folder contain music files
 MUSIC_FOLDER = os.path.dirname(os.path.abspath(__file__))
 
 @app.route("/playmusic")
@@ -16,7 +16,7 @@ def play_music():
     filename = f"{name}.mp3"
     filepath = os.path.join(MUSIC_FOLDER, filename)
 
-    # Kiểm tra tồn tại và đúng định dạng .mp3
+    # Check if the file exists and is an mp3 file
     if not os.path.isfile(filepath) or not filename.endswith('.mp3'):
         abort(404, description="Không tìm thấy file")
 
