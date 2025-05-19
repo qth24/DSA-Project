@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MusicPlease</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="music-player-container">
+        <h1 class="playlist-main-title">Website nghe nhạc vui vẻ cùng qth24</h1>
+
+        <div class="player-core">
+            <div class="album-art-section">
+                <img id="album-art-display" src="https://avatar-ex-swe.nixcdn.com/playlist/2022/11/07/3/6/a/1/1667814921240_300.jpg" alt="Album Art">
+            </div>
+            <div class="controls-section">
+                <input type="range" id="progress-bar" value="0" step="1">
+                <div class="time-display">
+                    <span id="current-time">0:00</span> / <span id="duration">0:00</span>
+                </div>
+                <div class="main-controls">
+                    <button id="prev-btn"><i class="fas fa-step-backward"></i></button>
+                    <button id="play-pause-btn"><i class="fas fa-play"></i></button>
+                    <button id="next-btn"><i class="fas fa-step-forward"></i></button>
+                </div>
+                <div class="secondary-controls">
+                    <button id="shuffle-btn" title="Shuffle"><i class="fas fa-random"></i></button>
+                    <button id="repeat-btn" title="Repeat"><i class="fas fa-redo"></i></button>
+                    <div class="volume-control">
+                        <i class="fas fa-volume-up"></i>
+                        <input type="range" id="volume-slider" min="0" max="1" step="0.01" value="1">
+                    </div>
+                    <span class="bitrate-display">128kbps</span>
+                </div>
+            </div>
+        </div>
+
+        <audio id="audio-player" preload="metadata"></audio>
+
+        <ul id="track-list" class="track-list">
+            <!-- Tracks will be loaded here by JavaScript -->
+        </ul>
+
+        <div class="playlist-footer">
+            <div class="created-by">
+                <img src="https://scontent.fsgn15-1.fna.fbcdn.net/v/t39.30808-1/475769558_1313690089832326_1194969456129952995_n.jpg?stp=dst-jpg_s480x480_tt6&_nc_cat=108&ccb=1-7&_nc_sid=e99d92&_nc_ohc=Z_U5mubjOAUQ7kNvwHC9V6W&_nc_oc=AdmupazvgsKglUoWmLhN-wWNVteymaG9y2y7pXz0s_9l6Gom2R1ramQDe09BtZdb4d0W8H0TxQIdiW3-4C-u_ybu&_nc_zt=24&_nc_ht=scontent.fsgn15-1.fna&_nc_gid=zmTu6NKOfER6MHg6s2shUQ&oh=00_AfJtZgAf6XBMqA835qcNw-p-cXmTf3ySXeY_dQx8j_9Ppw&oe=682FE1F7" alt="Believe Music" class="creator-avatar"> <!-- Placeholder image -->
+                <div class="creator-info">
+                    <span>Đinh Quốc Thịnh</span>
+                    <span class="creator-name">24521675</span>
+                </div>
+            </div>
+            <div class="playlist-actions">
+                <button><i class="fas fa-heart"></i> Thêm vào yêu thích</button>
+                <button><i class="fas fa-download"></i> Tải playlist</button>
+                <button><i class="fas fa-share-alt"></i> Chia sẻ/Chép link</button>
+                <button><i class="fas fa-ellipsis-h"></i></button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
